@@ -15,6 +15,8 @@
 # bigger ratio if seen fit. Values are with 0.25 increments.
 %define pixel_ratio 1.0
 
+%define android_version_major 11
+
 %include droid-configs-device/droid-configs.inc
 %include patterns/patterns-sailfish-device-adaptation-f21pro.inc
 %include patterns/patterns-sailfish-device-configuration-f21pro.inc
