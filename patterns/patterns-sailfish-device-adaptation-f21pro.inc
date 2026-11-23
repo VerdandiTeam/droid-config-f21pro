@@ -14,6 +14,9 @@ Requires: droid-config-f21pro-flashing
 Requires: droid-config-f21pro-bluez5
 Requires: droid-hal-version-f21pro
 
+# For mount partitions
+Requires: parse-android-dynparts
+
 # Hybris packages
 Requires: libhybris-libEGL
 Requires: libhybris-libGLESv2
