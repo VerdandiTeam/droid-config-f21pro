@@ -28,7 +28,7 @@ fallocate -l 3G userdata.img
 
 mkdir tmp
 
-mount -o context=system_u:object_r:tmp_t:s0 userdata.img tmp
+mount userdata.img tmp
 
 mkdir -p tmp/.stowaways/sailfishos
 
@@ -47,7 +47,6 @@ mv update-binary updater/META-INF/com/google/android/update-binary
 mv hybris-updater-script updater/META-INF/com/google/android/updater-script
 mv hybris-boot.img updater/hybris-boot.img
 mv dtbo.img updater/dtbo.img
-mv vendor_boot.img updater/vendor_boot.img
 mv userdata.img updater/userdata.img
 
 # Update updater-script with image details.
@@ -55,7 +54,7 @@ sed -i -e "s %VERSION% $VERSION_ID g" -e "s %IMAGE_FILE% $DST_IMG g" -e "s %IMAG
 
 # pack updater .zip
 pushd updater
-zip -r ../$DST_IMG_BASE.zip META-INF/com/google/android/update-binary META-INF/com/google/android/updater-script hybris-boot.img dtbo.img vendor_boot.img userdata.img $DST_IMG_BASE.ks $DST_IMG
+zip -r ../$DST_IMG_BASE.zip META-INF/com/google/android/update-binary META-INF/com/google/android/updater-script hybris-boot.img dtbo.img userdata.img $DST_IMG_BASE.ks $DST_IMG
 popd # updater
 
 # Move the rootfs back out of the updater directory

@@ -1,0 +1,6 @@
+/boot/hybris-boot.img
+/boot/hybris-recovery.img
+/boot/dtbo.img
+/boot/hybris-updater-script
+/boot/hybris-updater-unpack.sh
+/boot/update-binary

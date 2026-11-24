@@ -6,6 +6,7 @@ Summary: Jolla HW Adaptation f21pro
 Requires: droid-hal-f21pro
 Requires: droid-hal-f21pro-img-boot
 Requires: droid-hal-f21pro-kernel-modules
+Requires: droid-hal-f21pro-kernel-dtbo
 Requires: droid-config-f21pro-sailfish
 Requires: droid-config-f21pro-pulseaudio-settings
 Requires: droid-config-f21pro-policy-settings
