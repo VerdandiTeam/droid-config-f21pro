@@ -1,14 +1,13 @@
 [Unit]
 Description=Mount for /system/bin/rw-system.sh
-After=local-fs.target
-RequiresMountsFor=/system/bin/
+RequiresMountsFor=/system/bin
+Before=local-fs.target droid-hal-init.service
 
 [Mount]
 What=/usr/bin/droid/rw-system-stub.sh
 Where=/system/bin/rw-system.sh
 Type=none
 Options=bind
-TimeoutSec=10
 
 [Install]
-WantedBy=multi-user.target
+WantedBy=local-fs.target
