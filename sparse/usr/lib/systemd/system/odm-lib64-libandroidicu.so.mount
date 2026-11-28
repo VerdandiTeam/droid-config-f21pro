@@ -1,0 +1,10 @@
+[Unit]
+RequiresMountsFor=/system /odm/lib64
+Before=local-fs.target droid-hal-init.service
+[Mount]
+What=/system/system_ext/apex/com.android.art.release/lib64/libandroidicu.so
+Where=/odm/lib64/libandroidicu.so
+Type=none
+Options=bind
+[Install]
+WantedBy=local-fs.target
